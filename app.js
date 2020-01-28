@@ -1,4 +1,4 @@
-const app = new Vue(
+new Vue(
 {
     el: '#app',
     data: {
@@ -18,9 +18,8 @@ const app = new Vue(
                             return;
                         }
 
-                        response.json()
-                                .then(data => {
-                                app.dog = data.url;
+                        response.json().then(data => {
+                            this.dog = data.url;
                         });
                     }
                 )
